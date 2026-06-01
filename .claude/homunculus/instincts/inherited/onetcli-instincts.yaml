@@ -1,0 +1,298 @@
+# Instincts generated from https://github.com/gclm/onetcli
+# Generated: 2026-06-01T05:00:08.700Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: onetcli-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/onetcli
+---
+
+# Onetcli Commit Length
+
+## Action
+
+Keep commit messages concise (~24 characters)
+
+## Evidence
+
+- Average commit message length: 24 chars
+- Based on 1 commits
+
+---
+id: onetcli-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/onetcli
+---
+
+# Onetcli Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: onetcli-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/onetcli
+---
+
+# Onetcli Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: onetcli-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/onetcli
+---
+
+# Onetcli Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: onetcli-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/gclm/onetcli
+---
+
+# Onetcli Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: onetcli-instinct-file-naming
+trigger: "When creating a new TypeScript file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct File Naming
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: onetcli-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: onetcli-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: onetcli-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: onetcli-instinct-import-style
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: onetcli-instinct-export-style
+trigger: "When exporting from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: onetcli-instinct-commit-prefix-imgbot
+trigger: "When committing automated image optimization changes"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct Commit Prefix Imgbot
+
+## Action
+
+Prefix the commit message with [ImgBot]
+
+## Evidence
+
+- Seen in commit '[ImgBot] Optimize images'
+- Pattern in commits.prefixes
+
+---
+id: onetcli-instinct-commit-length
+trigger: "When writing commit messages"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 24 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: onetcli-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct Test Location
+
+## Action
+
+Place test files in a separate location from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: onetcli-instinct-folder-structure
+trigger: "When organizing project folders"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: gclm/onetcli
+---
+
+# Onetcli Instinct Folder Structure
+
+## Action
+
+Use a single-package structure with 'crates' and 'docs' as common folders
+
+## Evidence
+
+- Pattern in architecture.folderStructure.commonFolders
+- Pattern in architecture.folderStructure.type
+
